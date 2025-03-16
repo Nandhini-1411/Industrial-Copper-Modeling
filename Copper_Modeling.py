@@ -12,7 +12,7 @@ def predict_status(country,item_type,order_day,order_month,order_year,delivery_y
     order_day = item_date_input.day
     order_month = item_date_input.month
     order_year = item_date_input.year
-    with open(r"D:\CAPSTONE\COPPER\Classification_Model.pkl", "rb") as f:
+    with open("Model_Files/Classification_Model.pkl", "rb") as f:
         model_class = pickle.load(f)
     user_data = np.array([[country,item_type_encoded_value, order_year, order_month, order_day, delivery_year, 
                             delivery_month, delivery_day, application, width, product_ref, thickness_boxcox, 
@@ -27,7 +27,7 @@ def predict_selling_price(country, status, item_type, item_date_input, delivery_
     order_day = item_date_input.day
     order_month = item_date_input.month
     order_year = item_date_input.year
-    with open(r"D:/CAPSTONE/COPPER/Regression_Model.pkl", "rb") as f:
+    with open("Model_Files/Regression_Model.pkl", "rb") as f:
         model_regg = pickle.load(f)
     user_data = np.array([[country, status_encoded_value, item_type_encoded_value, order_year, order_month,
                             order_day, delivery_year, delivery_month, delivery_day, application, width,
