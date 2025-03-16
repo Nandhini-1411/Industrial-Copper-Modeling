@@ -23,7 +23,7 @@ def predict_status(country, item_type, order_day, order_month, order_year,
     item_type_encoded_value = item_type_encoded[item_type]
 
     # Download & Load Model
-    url = "https://drive.google.com/uc?id=15hTMPNsvtHry2lwwSbX9ytRExKJIoC_E"
+    url = "https://github.com/Nandhini-1411/Industrial-Copper-Modeling/blob/main/Model_Files/Classification_Model.pkl"
     output = "Classification_Model.pkl"
     download_model(url, output)
 
@@ -46,7 +46,7 @@ def predict_selling_price(country, status, item_type, order_day, order_month, or
     item_type_encoded_value = item_type_encoded[item_type]
 
     # Download & Load Model
-    url = "https://drive.google.com/uc?id=1mRZeAqbhJ6twbbpYSxubPQd-_illKukq"
+    url = "https://github.com/Nandhini-1411/Industrial-Copper-Modeling/blob/main/Model_Files/Regression_Model.pkl"
     output = "Regression_Model.pkl"
     download_model(url, output)
 
