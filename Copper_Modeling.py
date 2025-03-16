@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import os
 from streamlit_option_menu import option_menu
 item_type_encoded = {'IPL': 0, 'Others': 1, 'PL': 2, 'S': 3, 'SLAWR': 4, 'W': 5, 'WI': 6}
 status_encoded = {'Draft': 0,'Lost': 1,'Not lost for AM': 2,'Offerable': 3,'Offered': 4,'Revised': 5,
@@ -12,6 +13,8 @@ def predict_status(country,item_type,order_day,order_month,order_year,delivery_y
     order_day = item_date_input.day
     order_month = item_date_input.month
     order_year = item_date_input.year
+    if not os.path.exists("Classification_Model.pkl"):
+      os.system("git lfs pull")
     with open("Model_Files/Classification_Model.pkl", "rb") as f:
         model_class = pickle.load(f)
     user_data = np.array([[country,item_type_encoded_value, order_year, order_month, order_day, delivery_year, 
