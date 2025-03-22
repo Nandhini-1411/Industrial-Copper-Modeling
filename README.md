@@ -37,7 +37,7 @@ Built a web app where users can input data to get real-time predictions for eith
   - Matplotlib/Seaborn (for data visualization)
 
 ### Results
-  - The machine learning models predict the copper selling price and classify customer leads as 'Won' or 'Lost' with an accuracy of ±15%.
+  - The machine learning models predict the copper selling price and classify customer leads as 'Won' or 'Lost' with an accuracy of 90%.
   - The solution simplifies the process of making pricing and lead classification decisions, saving time and improving accuracy.
 ### Conclusion
 This project demonstrates how machine learning can improve decision-making in the copper industry by predicting prices and classifying leads more accurately and efficiently.
